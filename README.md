@@ -13,9 +13,18 @@
 
 - **50 CSS Animations** across 5 categories — all pure CSS `@keyframes`, zero JavaScript needed
 - **Live preview** on every card — animations play continuously in the card
-- **One-click copy** — click any card to open the code modal and copy the full CSS snippet
-- **Syntax-highlighted code view** — colour-coded `@keyframes` + class definition
-- **Usage guide tab** — step-by-step instructions for integrating each animation
+- **Interactive Customizer Modal** — click any card to customize:
+  - ⏱️ **Duration & Speed** (0.1s to 5.0s with quick presets)
+  - 📈 **Timing Function / Easing** (Ease, Linear, Spring, Snappy, Elastic, Steps)
+  - 🔁 **Iteration Count** (Infinite, 1x, 2x, 3x, 5x)
+  - ↔️ **Direction** (Normal, Reverse, Alternate, Alt-Reverse)
+  - ⏳ **Delay & Fill Mode** (0.0s to 3.0s, Both / Forwards / Backwards / None)
+  - 🎭 **Preview Shapes** (Icon, Glass Card, Button, Badge, or Custom Text)
+  - ⏯️ **Playback Controls** (Pause, Play, Replay from start)
+- **Live Generated CSS** — code updates in real-time as you tweak sliders with Shorthand and Longhand format support
+- **One-click copy** — copy the customized CSS directly into your project
+- **Syntax-highlighted code view** — colour-coded `@keyframes` + customized class definition
+- **Usage guide tab** — step-by-step instructions for HTML, React, and Next.js
 - **Search + Filter** — search by name/description, filter by category
 - **Interactive Playground** — mix any animation × shape × colour × speed in real time
 - **Fully responsive** — works on mobile, tablet, and desktop
@@ -70,10 +79,10 @@ npm start
 ## 📋 How to Use an Animation
 
 1. **Browse or search** for an animation on the homepage
-2. **Click the card** to open the code modal
-3. Hit **"Copy CSS"** to copy the full `@keyframes` + class snippet
-4. **Paste** into your own stylesheet
-5. Add the class to your HTML element — done!
+2. **Click the card** to open the interactive customizer modal
+3. **Customize** duration, easing physics, iteration count, direction, and delay live on the preview stage
+4. Hit **"Copy Customized Code"** (or switch to "CSS Code" tab to choose shorthand or detailed property syntax)
+5. **Paste** into your stylesheet and add the class to your HTML element — done!
 
 ### Example
 

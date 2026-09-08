@@ -959,7 +959,7 @@ export default function Home() {
                 All <span className="gradient-text">Animations</span>
               </h2>
               <p className="text-white/45 max-w-xl mx-auto text-sm sm:text-base mb-8">
-                Click any card to view the CSS code, copy it, and use it instantly in your project.
+                Click any card to customize speed, easing, and direction live &mdash; then copy the customized code straight into your project.
               </p>
 
               {/* Search + Filters row */}

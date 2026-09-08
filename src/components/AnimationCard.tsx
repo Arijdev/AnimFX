@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code2 } from 'lucide-react';
+import { Code2, Sliders } from 'lucide-react';
 import { AnimationDef } from './CodeModal';
 
 interface AnimationCardProps {
@@ -74,10 +74,10 @@ export default function AnimationCard({ anim, index, onClick }: AnimationCardPro
       </h3>
       <p className="text-xs text-white/40 leading-relaxed line-clamp-2">{anim.description}</p>
 
-      {/* "Click for code" footer hint */}
-      <div className="mt-3 flex items-center gap-1.5 text-[10px] text-white/20 group-hover:text-white/40 transition-colors duration-200">
-        <Code2 size={10} />
-        Click to view &amp; copy code
+      {/* "Click to customize & copy" footer hint */}
+      <div className="mt-3 flex items-center gap-1.5 text-[10px] text-white/20 group-hover:text-violet-300 transition-colors duration-200">
+        <Sliders size={10} />
+        Click to customize &amp; copy code
       </div>
     </motion.button>
   );
