@@ -1,16 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'AnimFX — CSS Animation Showcase',
+  title: 'AnimFX - 50 Pure CSS Animations Library',
   description:
-    'Explore 14+ interactive CSS animations with live previews, copy-ready snippets, and an interactive playground. Built with Next.js and Framer Motion.',
-  keywords: ['CSS animations', 'keyframes', 'animation showcase', 'framer motion', 'nextjs'],
-  openGraph: {
-    title: 'AnimFX — CSS Animation Showcase',
-    description: 'Explore 14+ interactive CSS animations with live previews and an interactive playground.',
-    type: 'website',
-  },
+    'A classic, lightweight library of 50 production-ready Pure CSS keyframe animations. Zero JavaScript dependencies, GPU-accelerated, and instant copy-paste ready.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0b0f19',
 };
 
 export default function RootLayout({
@@ -19,16 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="antialiased">{children}</body>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <body className="page-wrapper">
+        <Navbar />
+        <main style={{ flex: 1 }}>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
