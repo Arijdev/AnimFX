@@ -45,12 +45,25 @@ export default function HomePage() {
             animations. Fully customizable, framework-agnostic, and ready to copy into your project.
           </p>
 
-          <div className="hero-actions">
+          <div className="hero-actions" style={{ flexWrap: 'wrap', gap: '12px' }}>
+            <Link
+              href="/ai-generator"
+              className="btn"
+              style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)',
+                color: '#ffffff',
+                fontWeight: 700,
+                boxShadow: '0 4px 20px rgba(139, 92, 246, 0.4)',
+                border: 'none',
+              }}
+            >
+              ✨ Create with Gemini AI →
+            </Link>
             <Link href="/library" className="btn btn-primary">
-              Explore All 50 Animations →
+              Explore All 50 Animations
             </Link>
             <Link href="/playground" className="btn btn-secondary">
-              Open Interactive Playground
+              Interactive Playground
             </Link>
           </div>
 
@@ -71,6 +84,53 @@ export default function HomePage() {
               <div className="stat-value">100%</div>
               <div className="stat-label">Open Source & Free</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI GENERATOR SPOTLIGHT BANNER ───────────── */}
+      <section style={{ padding: '0 0 20px 0' }}>
+        <div className="container">
+          <div
+            style={{
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.15) 50%, rgba(217, 70, 239, 0.1) 100%)',
+              border: '1px solid rgba(168, 85, 247, 0.35)',
+              borderRadius: '16px',
+              padding: 'clamp(20px, 4vw, 36px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '24px',
+              flexWrap: 'wrap',
+              boxShadow: '0 8px 32px rgba(139, 92, 246, 0.15)',
+            }}
+          >
+            <div style={{ maxWidth: '640px' }}>
+              <div className="ai-studio-badge">
+                <span className="sparkle">✨</span> NEW FEATURE
+              </div>
+              <h2 style={{ fontSize: 'clamp(1.4rem, 3.5vw, 1.9rem)', fontWeight: 800, marginBottom: '8px', color: 'var(--text-primary)' }}>
+                Create Custom Animations with Gemini AI
+              </h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                Prompt any visual effect—cyberpunk portals, 3D floating glass, liquid blobs, or magnetic buttons. Gemini generates complete CSS keyframes, HTML, and isolated real-time sandbox preview.
+              </p>
+            </div>
+            <Link
+              href="/ai-generator"
+              className="btn"
+              style={{
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)',
+                color: '#ffffff',
+                fontWeight: 700,
+                padding: '12px 24px',
+                fontSize: '0.95rem',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 4px 18px rgba(139, 92, 246, 0.35)',
+              }}
+            >
+              Open AI Motion Studio →
+            </Link>
           </div>
         </div>
       </section>

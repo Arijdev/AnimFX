@@ -35,6 +35,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
+    { href: '/ai-generator', label: '✨ AI Studio', highlight: true },
     { href: '/library', label: 'Library' },
     { href: '/playground', label: 'Playground' },
     { href: '/about', label: 'About' },
@@ -58,7 +59,15 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`nav-link ${isActive ? 'active' : ''}`}
+                    className={`nav-link ${isActive ? 'active' : ''} ${link.highlight ? 'ai-nav-highlight' : ''}`}
+                    style={
+                      link.highlight
+                        ? {
+                            color: isActive ? '#d946ef' : '#c084fc',
+                            fontWeight: 700,
+                          }
+                        : undefined
+                    }
                   >
                     {link.label}
                   </Link>
